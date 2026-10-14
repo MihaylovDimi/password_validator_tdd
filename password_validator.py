@@ -1,8 +1,6 @@
-def validate(password):
-    has_digit = False
+"""Password validator built with TDD."""
 
-    for char in password:
-        if char.isdigit():
-            has_digit = True
-            break
+
+def validate(password):
+    has_digit = any(char.isdigit() for char in password)
     return len(password) >= 8 and has_digit
