@@ -15,3 +15,6 @@ class TestPasswordValidator(unittest.TestCase):
 
     def test_eight_character_password_is_valid(self):
         self.assertTrue(validate("12345678"))
+
+    def test_password_without_digit_is_invalid(self):
+        self.assertFalse(validate("PasswordNoDigit"))
